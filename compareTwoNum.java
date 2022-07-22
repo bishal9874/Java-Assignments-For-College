@@ -1,37 +1,25 @@
 package College_Assignment;
-//3. Write a Java program to compare two numbers 
 
 import java.util.Scanner;
 
 public class compareTwoNum {
-    static void compare(int number1, int number2) {
 
-        if (number1 == number2)
-            System.out.printf("%d == %d\n", number1, number2);
-        if (number1 != number2)
-            System.out.printf("%d != %d\n", number1, number2);
-        if (number1 < number2)
-            System.out.printf("%d < %d\n", number1, number2);
-        if (number1 > number2)
-            System.out.printf("%d > %d\n", number1, number2);
-        if (number1 <= number2)
-            System.out.printf("%d <= %d\n", number1, number2);
-        if (number1 >= number2)
-            System.out.printf("%d >= %d\n", number1, number2);
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Input first number: ");
+        int x = in.nextInt();
+        System.out.print("Input second number: ");
+        int y = in.nextInt();
+        System.out.print("Input third number: ");
+        int z = in.nextInt();
+
+        if (x == y && x == z) {
+            System.out.println("All numbers are equal");
+        } else if ((x == y) || (x == z) || (z == y)) {
+            System.out.println("Neither all are equal or different");
+        } else {
+            System.out.println("All numbers are different");
+        }
     }
-
-    public static void main(String args[]) {
-
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Input first integer: ");
-        int number1 = input.nextInt();
-
-        System.out.print("Input second integer: ");
-        int number2 = input.nextInt();
-
-        compare(number1, number2);
-
-    }
-
 }
